@@ -1,13 +1,11 @@
-import flet
-from flet import KeyboardEvent, Page, Text
+from tkinter import *
 
 
-def main(page: Page):
-    print(dir(page))
-    page.window_maximized = True
-    page.add(Text(value = 'Alô alô'))
-    page.update()
-   
+class main:
+    def __init__(self, top):
+        top.state('zoomed')
 
 
-flet.app(target=main)
+root = Tk()
+main(root)
+root.mainloop()
